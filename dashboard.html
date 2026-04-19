@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="toast"></div>
+<header>
+  <h2>SmartBank Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Your Balance</h3>
+    <h1 id="balance">₹0</h1>
+  </div>
+
+  <div class="card">
+    <h3>Send Money</h3>
+    <input type="text" id="receiver" placeholder="Receiver Email">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="transfer()">Transfer</button>
+  </div>
+
+  <div class="card">
+    <h3>Add Money</h3>
+    <input type="number" id="addAmount" placeholder="Amount">
+    <button onclick="addMoney()">Add</button>
+  </div>
+
+  <div class="card">
+    <h3>Transactions</h3>
+    <ul id="transactions"></ul>
+  </div>
+
+</div>
+
+<div class="card">
+  <h3>Spending Chart</h3>
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="card atm">
+  <h4>SmartBank</h4>
+  <h2 id="balance">₹0</h2>
+  <p>**** **** **** 1234</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
